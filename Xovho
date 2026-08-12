@@ -752,7 +752,7 @@ end
 local allMerchantItems = {
     "Moonlit Scroll", "Chilly Scroll", "Toasty Scroll", "Tranquil Scroll", "Shocked Scroll",
     "Gold Scroll", "Glitched Scroll", "Rainbow Scroll", "Totem of Might", "Totem of Marrow",
-    "Totem of Stars", "Totem of Status", "Gilded Hatch Hammer", "Raygun", "Alien Tesla"
+    "Totem Of Stars", "Totem Of Status", "Gilded Hatch Hammer", "Raygun", "Alien Tesla"
 }
 local selectedMerchantItems = {}
 for _, item in ipairs(allMerchantItems) do selectedMerchantItems[item] = false end
