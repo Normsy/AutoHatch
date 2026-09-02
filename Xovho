@@ -1,3 +1,28 @@
+-- Humanized Auto-Tap Lua Script for Delta (10-second delay)
+local plrs = game:GetService("Players")
+local localPlayer = plrs.LocalPlayer
+
+-- Configuration
+getgenv().AutoTapping = true -- Set to false to stop
+local tapDelay = 10          -- Exactly 10 seconds delay between each tap
+
+task.spawn(function()
+    while getgenv().AutoTapping do
+        local vim = game:GetService("VirtualInputManager")
+        local screenX, screenY = 500, 500 -- Change coordinates if needed
+        
+        -- Simulate press and release
+        vim:SendMouseButtonEvent(screenX, screenY, 0, true, game, 1)
+        
+        -- Short human hold duration
+        task.wait(0.05)
+        
+        vim:SendMouseButtonEvent(screenX, screenY, 0, false, game, 1)
+        
+        -- Wait 10 seconds before the next tap
+        task.wait(tapDelay)
+    end
+end)
 
 
 
